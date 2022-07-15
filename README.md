@@ -1,6 +1,6 @@
 # How to run
 
-### To run the project, execute the following command:
+### To run the project, execute the following command in the src directory:
 ```
 python3 main.py
 ```
