@@ -6,6 +6,6 @@ python3 main.py
 ```
 #### This project is an implementation of the Bron-Kerbosch Algorithm with and without pivoting. 
 
-### Autor
+### Author
 
-- Caio Bernardon N. K. Massucato – 16/0115001
+- Caio Behrnardon N. K. Massucato – 16/0115001
