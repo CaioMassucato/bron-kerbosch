@@ -1,4 +1,4 @@
-# Como compilar
+# How to run
 
 ### To run the project, execute the following command:
 ```
