@@ -9,13 +9,13 @@ nodes = 0
 def basic_bron_kerbosch(adj_list, clique, candidates, excluded, counter):
     '''Bronker Bosch Algorithm without pivoting'''
     
-    # Countes the number of iterations and appends clique to list
+    # Counts the number of iterations and appends clique to list
     counter.calls_count()
     if not candidates and not excluded:
         counter.save_clique(clique)
         return
  
-    # Recursively removes vertices from candidates and adds to excluded
+    # Recursively calls the algorithm, removing vertices from candidates and adding to excluded
     for vertice in list(candidates):
         
         new_candidates = candidates.intersection(adj_list[vertice])
@@ -27,7 +27,7 @@ def basic_bron_kerbosch(adj_list, clique, candidates, excluded, counter):
 def pivoting_bron_kerbosch(adj_list, clique, candidates, excluded, counter):
     '''Bron–Kerbosch algorithm with pivoting'''
     
-    # Countes the number of iterations and appends clique to list
+    # Counts the number of iterations and appends clique to list
     counter.calls_count()
     if not candidates and not excluded:
         counter.save_clique(clique)
@@ -36,7 +36,7 @@ def pivoting_bron_kerbosch(adj_list, clique, candidates, excluded, counter):
     # Picks the pivot from candidates or excluded
     pivot = pick_random(candidates) or pick_random(excluded)
     
-    # Recursively removes vertices from candidates and adds to excluded
+    # Recursively calls the algorithm, removing vertices from candidates and adding to excluded
     for vertice in list(candidates.difference(adj_list[pivot])):
         new_candidates = candidates.intersection(adj_list[vertice])
         new_excluded = excluded.intersection(adj_list[vertice])
